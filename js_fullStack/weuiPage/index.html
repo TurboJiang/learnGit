@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="container">
+    <div class="page button js_show">
+         <div class="page__bd page__bd_spacing">
+            <a href="#" class="weui-btn weui-btn_primary"id='primary'>页面主操作 normal</a>
+            <!-- id权重比class高，优先id -->
+            <a href="#" class="weui-btn weui-btn_primary weui-btn_loading"id="loading">
+                <i class="weui-loading"></i>页面主操作 loading</a>
+            <a href="#" class="weui-btn  weui-btn_disabled">页面主操作 loading</a>
+            <a href="#" class="weui-btn  weui-btn_default">hello world</a>
+        </div>
+    </div>
+</div>
+<script>
+    var oLoading=document.getElementById('loading');
+    console.log(oLoading);
+    // 点击事件
+    oLoading.onclick=function(){
+        // console.log("123");
+        // js的API,给其设置值
+        this.innerHTML="good！";
+    }
+    var oPrimary=document.getElementById('primary');
+    oPrimary.onclick=function(){
+        // 点击一个东西时添加一个类名
+        this.classList.add('active');
+        var _this=this;
+    // 定时器之前的作用域为第一个
+    // setTimeout(function(){//es5function函数会修改作用域
+    //     // this的作用域改成了window
+    //     this.classList.remove('active');
+    // },2000);
+    setTimeout(()=>{
+        // es6箭头函数不修改作用域
+        this.classList.remove('active');
+     },2000)
+    }
+</script>
+</body>
+</html>

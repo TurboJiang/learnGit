@@ -1,0 +1,67 @@
+/* 默认设置影响尺寸，重设 */
+*{
+    margin: 0;
+    padding: 0;
+}
+.login-container{
+    width: 286px;
+    height: 298px;
+    border: 1px solid #e5e5e5;
+}
+.default{
+    padding-top:39px;
+}
+.head-img-row{
+    margin-bottom: 14px;
+}
+.head-img-row img{
+    width: 58px;
+    height: 58px;
+    border: 5px solid #e5e5e5;
+    /* 自动居中 图片为行内元素，使用auto需要转为块 */
+    margin: 0 auto;
+    border-radius: 50%;
+    /* 将行内元素转为块元素 */
+    display: block;
+}
+.user-name{
+    font-size: 16px;
+    color: #222222;
+    text-align: center;
+    /* 最多能显示152像素的字 */
+    width: 152px;
+    /* 居中 */
+    margin: 0 auto;
+    /* 保持文本在到达极限时不换行 */
+    white-space: nowrap;
+    /* 文本超出显示省略...隐藏 */
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* 公共类btn */
+.btn{
+    width: 148px;
+    height: 48px;
+    /* 左右margin值自动 */
+    /* margin: 0 auto; */
+    /* 转为块元素，不在一行 */
+    display: block;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    line-height: 48px;
+    color: #332233;
+    border-radius: 24px;
+}
+.btn-register{
+    /* 顺序上右下左 */
+    margin: 16px auto 19px;
+}
+a{
+    text-decoration: none;
+}
+.btn-login{
+    margin: 0 auto;
+}
+.btn:hover{
+    background-color: #dddddd;
+}

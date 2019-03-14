@@ -1,0 +1,47 @@
+.weui-cells{
+    font-style: 17px;
+    line-height: 1.47058824;
+    background-color: #fff;
+     overflow: hidden; /* 子元素超出父元素就隐藏 */
+     position: relative;
+    margin-top: 1.17647059em;/*当前fontsize的大小 */
+}
+/* border-top&border-bottom使用设置上下边界会导致盒子的大小不稳定
+盒子的模型 */
+.weui-cells:before,.weui-cells:after{
+     /* 不影响父元素的盒子模型 */
+     content:"";
+     /* 定位会让元素离开文档流 */
+     position: absolute;
+     left: 0;
+     
+     right:0;
+     height: 1px;
+     /* 直线覆盖图标——伪元素是离开文档流的 */
+     border-top: 1px solid #e5e5e5;
+     /* background-color: red; */
+     /* 变形属性:以Y轴缩小从下往上原点保持不变,从上往下保持0 100%不变 */
+     transform:scaleY(.5);
+}
+.weui-cells:before{
+    top: 0;
+    /*从下往上 变形的基点在0，0 */
+    transform-origin: 0 0;
+}
+.weui-cells:after{
+    bottom: 0;
+    /* 从上往下，基点0 100%保持不变 */
+    transform-origin:0 100%;
+}
+.weui-cell{
+    padding: 10px 15px;
+    position: relative;
+    /* 弹性布局 --为盒状模型提供最大的灵活性*/
+    display: flex;
+    /*定义项目在交叉轴上中点对齐 */
+    align-items: center;
+}
+.weui-cell__bd{
+    /* flex属性为1是主元素，其他元素只分配一部分 */
+    flex:1;
+}

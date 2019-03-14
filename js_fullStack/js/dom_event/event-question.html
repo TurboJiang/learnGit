@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lists">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <!-- <li id="one">1</li>
+        <li id="two">2</li>
+        <li id="three">3</li> -->
+    </ul>
+    <script>
+        // 点击每个li
+        // consol.log()出里面的内容
+        const lists=document.getElementById("lists");
+        // const li=document.getElementById(li);
+        // const one=document.getElementById('one');
+        // const two=document.getElementById('two');
+        lists.addEventListener('click',()=>{
+            if(event.target.tagname==="LI"){
+            console.log(event.target.innerHTML);}
+        });
+        // one.onclick=function (){
+        //     console.log(1);
+        // }
+        // two.onclick=function (){
+        //     console.log(2);
+        // }
+        // three.onclick=function (){
+        //     console.log(3);
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>duck sing- js 动态类型</title>
+</head>
+<body>
+    <script>
+        //背景:合唱团招募
+        //新建数组
+        let choir=[];//合唱团；let:es6声明变量；
+        // 对象字面量
+        //JASON Object;
+        const duck={
+            // duckSinging:()=>{console.log('');};箭头函数
+            //JASON简写duckSinging(){...};
+           duckSinging:function(){//匿名函数；
+            console.log('嘎嘎...');
+           },
+        };
+        //用于验证typeof用法；
+        const chicken={
+            duckSinging(){
+         console.log('嘎嘎...');},
+        };
+        //函数,将函数赋给一个常量（赋值）
+        //声明变量;let joinChoir;let joinChoir= 2;
+        const joinChoir=(animal)=>{//参数;
+            //typeof检验是否存在该函数；返回类型；
+            if(animal && typeof animal.duckSinging === 'function'){//验证animal是否有值并验证是否是会叫的duck；
+               choir.push(animal);//将animal放入choir
+            console.log('恭喜加入合唱团');
+            console.log(+choir.length); 
+            }
+        };
+        for(let i=0;i<999;i++){
+            joinChoir(duck);
+        }
+        joinChoir(chicken);
+        console.log('合唱团数量：' +choir.length);
+    </script>
+</body>
+</html>

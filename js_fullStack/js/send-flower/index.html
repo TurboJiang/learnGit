@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>talk in js-代理模式</title>
+</head>
+<body>
+    <script>
+        // 声明常量对象 {}代表object ，key:'value',
+        // 描述的方式对象是怎样的
+        // 对象字面量：JSON Object
+        const xsj={
+            name:'李雷',
+            age:22,
+            yz:86,
+            single:true,
+            hometown:'绍兴',
+            room:1319,
+            
+            // 上面都为属性
+            // 函数功能 function匿名函数 target形参
+            sendFlower:function(target){
+                // 对象的行为方法函数
+                // console.log(target.name);
+                //  target.sendFlower();
+                target.receiveFlower(xsj);
+            }
+        };
+        const mm={
+            name:'韩梅梅',
+            age:18,
+            mood:50,
+            receiveFlower:function(sender){
+                // homework：如果心情指数大于80 否则拒收if-else
+                if(mm.mood<80){console.log('心情不好不想收');}
+                else{
+                    console.log('心情值高于80，心情变好了，收下花');
+                }
+                // if(sender.yz<85){console.log('收下花，但是没空');}
+                //     else{console.log('排队');}  
+                // console.log('收到了花');      
+            },
+            listenGoodMood:function(){
+                // 心情不好、定时器
+                // console.log('本公主谁都不想见');
+                console.log('心情值低于80');
+                setTimeout(function(){
+                    // 设置韩梅梅的心情变化
+                    mm.mood=85;
+                 //   console.log(mm.mood);
+                    // console.log('本公主心情变好了');
+                    mm.receiveFlower(gg);
+                },3000);
+                // 3seconds之后心情变好了，在网页中3s出现
+            }
+        };
+        // A 送花 send_flower；
+        // C 收花 转送给B
+        // B 收花 receive_flower；
+        const gg={
+            name:'小红',
+            age:18,
+            // 与韩梅梅实现同样的接口,代理梅梅收花，为代理模式
+            receiveFlower:function(sender){
+            //     if(sender.name==='李雷'){
+            //         console.log('就让我们在一起吧');
+            //     }else{
+            //         mm.receiveFlower();
+            //         console.log('花成功转送给韩梅梅');}
+            // mm.receiveFlower(sender);
+            // 心情好再送；代理者监听mm心情
+            mm.listenGoodMood(function(){
+                    
+                 })
+            }
+        }
+    </script>
+</body>
+</html>
