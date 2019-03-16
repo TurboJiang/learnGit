@@ -52,7 +52,7 @@
           </div>
           <div class="weui-cell__bd weui-cell_primary">
             <p>糖果支付</p>
-            <p>dasda</p>
+            <!-- <p>dasda</p> -->
           </div>
           <span class="price-way"></span>
         </a>
@@ -68,9 +68,18 @@
       </div>
     </div>
     <div class="page__bd">
-      <a href="javascript:;" class="weui-btn weui-btn_pay">去支付</a>
+      <a href="javascript:;" class="weui-btn weui-btn_pay" id="goPay">去支付</a>
     </div>
   </div>
+  <div class="js_dialog" id="iosDialog2" style="opacity: 1;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog" id="dialog1">
+        <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+        <div class="weui-dialog__ft">
+            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="iKnow">知道了</a>
+        </div>
+    </div>
+</div>
   <script>
     var oType = document.querySelectorAll('.item-price');
     console.log(oType)
@@ -82,6 +91,33 @@
         }
         this.classList.add('active')
       })
+    }
+// 选中微信支付或者糖果支付触发圆圈事件变蓝
+// weui-cell_primary微信支付糖果支付的父类，price-way圆角的类
+    var keyType=document.querySelectorAll('.weui-cell_access');
+    var spanType=document.querySelectorAll('.price-way');
+    for (let i = 0; i < keyType.length; i++) {
+      console.log(i)
+      keyType[i].addEventListener('click', function () {
+        for (let j of spanType) {
+          j.classList.remove('active1')
+        }
+        spanType[i].classList.add('active1')
+      })
+    }
+    var oPay=document.getElementById('goPay');
+    var dialog=document.getElementById('iosDialog2');
+    oPay.onclick=function(){
+      // 直接用嵌入式js修改样式
+      dialog.style.display="block";
+      dialog.style.opacity=1;
+    }
+    var log1=document.getElementById('dialog1');
+    var know=document.getElementById('iKnow');
+    know.onclick=function(){
+      dialog.style.display="none";
+      dialog.style.opacity=0;
+      
     }
   </script>
 </body>
