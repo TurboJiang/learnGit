@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>年度听歌报告</title>
+  <link rel="shortcut icon"
+  href="//s1.music.126.net/style/favicon.ico">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <audio src="./One Direction - What Makes You Beautiful.mp3" id="bgm"></audio>
+  <div class="music-btn off"></div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        slide -1 
+      </div>
+      <div class="swiper-slide">
+         <!-- 荡秋千 -->
+         <div class="view special">
+             <div class="art">
+                 <!-- 秋千 -->
+                 <div class="swing">
+                     <!-- 人的腿 -->
+                     <div class="leg2">
+                        <div class="jiojio"></div>
+                     </div>
+                     <div class="leg1">
+                        <div class="jiojio"></div>
+                     </div>
+                     <!-- 脖子 -->
+                     <div class="neck"></div>
+                     <!-- 头 -->
+                     <div class="head">
+                         <div class="hair"></div>
+                     </div>
+                 </div>
+             
+             
+             
+             
+             
+            </div>
+            <div class="paras">
+                    <p class="para f-animLineUp" style="transition-delay: 0.2s;">
+                      <em class="s-fcRed">11月16日</em>
+                    </p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.3s;">
+                      大概是很特别的一天
+                    </p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.4s;">
+                      这一天里
+                    </p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.5s;">
+                      你把One Direction…的
+                      <em class="s-fcRed">《What Makes You Beautiful》</em>
+                    </p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.6s;">
+                      反复听了
+                      <em class="s-fcRed">10次</em>
+                    </p>
+                  </div>
+         </div>
+      </div>
+      <div class="swiper-slide">
+          slide - 3
+      </div>
+    </div>
+  </div>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js">
+  </script>
+  <script>
+  const musicBtn = document
+  .querySelector('.music-btn');
+  const bgm = document.getElementById('bgm');
+  const paras=document.querySelector('.paras');
+  // 控制音乐开关
+        // 使用Boolean型flag判断或者直接使用bgm的属性
+        // let flag=true;
+  musicBtn.addEventListener('click', () => {
+    if (bgm.paused) {
+      bgm.play();
+      // musicBtn.classList.remove('off');
+    } else {
+      bgm.pause();
+      // musicBtn.classList.add('off');
+    }
+     // flag=!flag;
+            // 等于去除和添加
+    musicBtn.classList.toggle('off');
+  });
+  var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    // 对象，添加事件的监听
+    on:{
+        // 看访问哪个文本
+        slideChangeTransitionEnd:function(){
+            if(this.activeIndex===1){
+                paras.classList.add('z-enter');
+            }else{
+                paras.classList.remove('z-enter');
+            }
+        }
+    }
+  })
+  </script>
+</body>
+</html>

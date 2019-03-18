@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG-霓虹灯</title>
+    <style>
+       *{
+           margin: 0;
+           padding: 0;
+       }
+       .text{
+           font-weight: bold;
+           font-size: 64px;
+           /* 文字变大写 */
+           text-transform: uppercase;
+           stroke:olive;
+           fill:none;
+           stroke-width: 2;
+           /* 虚线的数组:整体实心为310，虚为90；比例为90：310 */
+           stroke-dasharray: 90 310;
+           /* stroke-dashoffset: -1; */
+           /* 匀速渐变 */
+           animation:stroke 6s infinite linear;
+       }
+        @keyframes stroke{
+          100%{
+              /* 实虚比例之间偏移 */
+              stroke-dashoffset: -400;
+          } 
+       } 
+       .text-1{
+           text-shadow: 0 0  5px orange;
+           stroke:orange;
+           animation-delay: -3s;
+       }
+       .text-2{
+           stroke:pink;
+           text-shadow: 0 0 5px pink;
+            animation-delay: -4.5s;
+       }
+       .text-3{
+           stroke:olive;
+           text-shadow: 0 0 5px olive;
+            animation-delay: -6s;
+       }
+    </style>
+</head>
+<body>
+    <!-- 图形表现，canvas -->
+    <!-- line为svg内部可使用的标签 -->
+    <!-- <svg width="750" height="500"  -->
+        <!-- xmlns="http://www.w3.org/2000/svg"> -->
+        <!-- 直线坐标：两个点 -->
+        <!-- <line x1="3" y1="3" x2="48" y2="3"></line> -->
+        <!-- 矩形初始坐标，以及 -->
+        <!-- <rect x="13" y="13" width="80" height="60"></rect> -->
+    <!-- </svg> -->
+
+    <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+        <!-- 绘制文本 ：将文本放置中心点,设置中心点位置-->
+            <text text-anchor="middle" x="50%" y="50%" class="text">
+            segmentfault.com
+        </text>
+        <text text-anchor="middle" x="50%" y="50%" class="text text-1">
+            segmentfault.com
+        </text>
+        <text text-anchor="middle" x="50%" y="50%" class="text text-2">
+            segmentfault.com
+        </text>
+        <text text-anchor="middle" x="50%" y="50%" class="text text-3">
+            segmentfault.com
+        </text>
+    </svg>
+    <!-- <div style="height:100px;border:1px dashed red;"></div> -->
+</body>
+</html>
