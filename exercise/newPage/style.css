@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    fonts: 20px;
+}
+ul li{
+    /* 无序列表 */
+    list-style: none;
+}
+.page{
+    width: 100%;
+    /* 整个页面往内15px */
+    padding: 15px;
+    box-sizing: border-box;
+}
+.page-header{
+    width: 100%;
+}
+.page-header__pic{
+    /* 一定要定义宽高 */
+    width: 100%;
+    /* 1rem=实际像素/定义的fontsize大小 */
+    height: 200px;
+    background: url('./images/images/liu3.jpg'),no-repeat;
+    background-size: cover;
+}
+.page-header__userinfo{
+    /*上右下左  */
+    padding: 10px 10px 13px 10px;
+    position: relative;
+}
+.name{
+    /* 文字有多大，所占大小为多大 */
+    line-height: 1;
+}
+.labels{
+    
+    margin-top: 10px;
+}
+.label{
+    font-size: 14px;
+    color:#fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.blue{
+    background-color: #48A6FD;
+}
+.green{
+    background-color: #1DCA42;
+}
+.orange{
+    background-color: #FB8800;
+}
+.page-header__msg{
+    margin-top: 10px;
+}
+.item{
+    /* 130-35:不换行 */
+    width: 95px;
+    /* 块转行 */
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+}
+.site::before{
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: url('./images/images/site.png')no-repeat;
+    background-size: 100%;
+    /* 相对父级元素item定位:脱离文档流 */
+    position: absolute;
+    left: 0;top: 0;
+}
+.profession::before{
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: url('./images/images/hangye.png')no-repeat;
+    background-size: 100%;
+    /* 相对父级元素item定位:脱离文档流 */
+    position: absolute;
+    left: 0;top: 0;
+}
+.love::before{
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: url('./images/images/role.png')no-repeat;
+    background-size: 100%;
+    /* 相对父级元素item定位:脱离文档流 */
+    position: absolute;
+    left: 0;top: 0;
+}
+.wechat::before{
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: url('./images/images/wechat.png')no-repeat;
+    background-size: 100%;
+    /* 相对父级元素item定位:脱离文档流 */
+    position: absolute;
+    left: 0;top: 0;
+}
+.iphone::before{
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: url('./images/images/iphone.png')no-repeat;
+    background-size: 100%;
+    /* 相对父级元素item定位:脱离文档流 */
+    position: absolute;
+    left: 0;top: 0;
+}
+.ewm{
+    width: 34px;
+    height: 33px;
+    position: absolute;
+    top: 40px;
+    right: 11px;
+}
+.ewm img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.envelope{
+    position: absolute;
+    width: 55px;
+    height: 50px;
+    right: 4px;
+    bottom: 0;
+}
+.envelope img{
+    diaplay:block;
+    width: 100%;
+    height: 100%;
+}
