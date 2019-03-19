@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            width: 100%;
+            text-align: center;
+            background-color: #aaa;
+        }
+        .text {
+            font-size: 40px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+        /* 防止布局塌陷，需要清除浮动 */
+        .content {
+            /* 清除浮动：块级格式化上下文overflow：hidden/auto/scroll */
+            /* overflow: hidden; */
+          padding: 0 200px;
+        }
+        /* 用伪元素补充父元素坍塌的部分 */
+        .clearfix::after{
+            /* 以下三个专门用来清除浮动 */
+            content:"";
+            display: block;
+            clear: both;
+            /* 用于定义伪元素中的其他东西 */
+            height: 0;
+            visibility: hidden;
+        }
+        .mian {
+            float:left;
+            width: 100%;
+            height: 200px;
+            background-color:coral
+        }
+        .left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color:aquamarine;
+            position: relative;
+            left: -200px;
+            margin-left: -100%;
+        }
+        .right {
+            float:right;
+            width: 200px;
+            height: 200px;
+            background-color:bisque;
+            /*相对于自己定位  */
+           position: relative;
+           margin-left: -200px;
+           left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>圣杯布局</header>
+    <div class="content clearfix">
+            <div class="mian text">main</div>
+            <div class="left text"> left </div>
+            <div class="right text">right</div>
+            <!-- 清除浮动 -->
+            <!-- <div style="clear: both;"></div> -->
+    </div>
+    <footer>footer</footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+*{
+    margin: 0;padding: 0;
+}
+.swiper-slide{
+   width: 300px;
+   height: 178px;
+   border-radius: 5px;
+   border:1px solid red;
+   padding: 12px 16px;
+   /*  */
+   box-sizing: border-box;
+}
+/* 定义了一个字体 */
+@font-face {
+    font-family: 'iconfont';  /* project id 1096777 */
+    src: url('//at.alicdn.com/t/font_1096777_d853orvuvvn.eot');
+    src: url('//at.alicdn.com/t/font_1096777_d853orvuvvn.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1096777_d853orvuvvn.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1096777_d853orvuvvn.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1096777_d853orvuvvn.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1096777_d853orvuvvn.svg#iconfont') format('svg');
+  }
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .swiper-slide.balance-plan{
+      background: linear-gradient(90deg,#ec6534,#f19e44);
+      color:#fff;
+  }
+  .swiper-slide.balance-plan header span{
+      display: block;
+  }
+  .swiper-slide.balance-plan header{
+      display: flex;
+      align-items: center;
+  }
+  /* 将箭头弹性布局到右边 */
+  .swiper-slide.balance-plan .slide-header__title{
+    flex: 1;
+  }
+  .weui-cell__edit{
+    border:1px solid #000;
+    border-radius: 5px;
+    line-height: 1;
+  }
+  .weui-cell__login{
+    border:1px solid #000;
+    border-radius: 5px;
+    line-height: 1;
+  }
