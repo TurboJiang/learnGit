@@ -100,10 +100,6 @@
     position: relative;
     align-items: center;
 }
-.weui-cell2__ft {
-    
-}
-
 .weui-cells3 {
     font-size: 10px;
     line-height: 1.47058824;
@@ -140,12 +136,6 @@
     position: absolute;
     align-items: center;
 }
-.weui-cell3__bd {
-      
-}
-.weui-cell3__ft {
-}
-
 .haibao {
     margin-top: 10px;
 }
@@ -193,5 +183,16 @@
 .weui-cell__bd {
       flex: 1;
 }
-.weui-cell__ft {
+.weui-cell__edit{
+    width: 50px;
+    border-radius: 5px;
+    border:1px solid  #000;
+}
+.weui-cell__login{
+    width: 50px;
+    border-radius: 5px;
+    border:1px solid  #000;
+}
+.weui-cell4 weui-cell4__ft{
+    display: inline-block;
 }
