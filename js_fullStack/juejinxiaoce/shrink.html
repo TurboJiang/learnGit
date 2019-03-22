@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* flex-shrink 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩
+            其收缩的大小是依据 flex-shrink 的值。 */
+        #content{
+            display: flex;
+            width: 500px;
+        }
+        #content div{
+            flex-basis: 120px;
+            border:3px solid rgba(0,0,0,.2);
+        }
+        .box{
+             /* 搭配flex-basis使用 */
+             /* 不缩放，box1，box2缩放后剩余的平分 */
+            flex-shrink: 0;
+        }
+        .box1{
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+<body>
+    <div  id="content">
+        <div class="box" style="background-color: khaki;">A</div>
+        <div class="box" style="background-color: lightcoral;">B</div>
+        <div class="box" style="background-color:skyblue;">C</div>
+        <div class="box1" style="background-color: olivedrab">D</div>
+        <div class="box1" style="background-color: orange">E</div>
+    </div>
+</body>
+</html>

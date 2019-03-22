@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>掘金小册</title>
+    <style>
+        html,body{
+            margin: 0;padding: 0;
+            height: 100%;
+        }
+        .page{
+            /* 从body中继承高度：单屏应用 */
+            height: 100%;
+            /* 在水平方向x轴上禁止出现滚动条，隐藏 */
+            overflow-x: hidden;
+            /* y轴上滚动 */
+            overflow-y: scroll;
+            /* 移动端，搭配垂直方向滚动使用 */
+            -webkit-overflow-scrolling: touch;
+        }
+        .box{
+            /* 宽度溢出，会出现滚动条 */
+            width: 120%;
+            height: 3000px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
