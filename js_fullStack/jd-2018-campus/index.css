@@ -124,3 +124,171 @@ html,body{
     margin-left: 1.2rem;
     margin-bottom: 1.33rem;
 }
+.p2 .num{
+    color:#fff;
+    font-size: 2.66667rem;
+    line-height: 1;
+}
+.music-btn{
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 9999;
+    width: 40px;height: 40px;
+    /* background通用，直接列出属性的值 */
+    background:url(https://kfc.normcore.com/bft_burger/static/images/icon-play.png)
+    /* 平铺 */
+    no-repeat
+    /*位置 */
+    center/cover;
+}
+.music-btn.off{
+    background-image: url(https://kfc.normcore.com/bft_burger/static/images/icon-mute.png);
+}
+/* p3 */
+.p3 .bg{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/bg-scene-02_8a15db.jpg) no-repeat bottom;
+    background-size: 100% auto;
+}
+.p3 .light1,.p3 .light2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.p3 .light1{
+    margin-bottom: 4.26667rem;
+    margin-left: -1.06667rem;
+    width: 6.8rem;
+    height: 3.53333rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/light-scene-02-2_5dd307.png)no-repeat;
+    background-size: 100% auto;
+}
+.p3 .dog{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: -0.8rem;
+    margin-top: -4.53333rem;
+    width: 4.56rem;
+    height: 8.73333rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/dog-scene-02_a8f96b.png)no-repeat;
+    background-size: 100% auto;
+}
+.p3 .light2{
+    margin-bottom: 3.2rem;
+    margin-left: -1.33333rem;
+    width: 14.76rem;
+    height: 7.66667rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/light-scene-02-1_0fe3a3.png)no-repeat;
+    background-size: 100% auto;
+}
+.p3 .text{
+    text-indent: -133.32rem;
+}
+.p3 .text-bottom,.p3 .text-top{
+    background-size: 32.49333rem 2.26667rem;
+}
+.p3 .text-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    width: 1.46667rem;
+    height: 0.54667rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-position:-2.56rem 0;
+    margin-top: 4.26667rem;
+}
+.p3 .text-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-bottom: 1.33333rem;
+    width:3.33333rem;
+    height: 2.26667rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-position: -12.61333rem 0;
+}
+.p3 .num{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1.06667rem;
+    margin-top: 1.06667rem;
+    color:#fff;
+    font-size: 2.66667rem;
+    line-height: 1;
+}
+/* p8 */
+.p8{
+    background: #ff1e00;
+}
+.p8 .logo-ran,.p8 .text-slogon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: -133.32rem;
+    margin-left: 0.85333rem;
+}
+.p8.swiper-slide-active  .logo-ran{
+    animation: fadeInRight .5s .3s both;
+}
+.p8.swiper-slide-active  .text-slogon{
+    animation: fadeInRight .5s .4s both;
+}
+.p8.swiper-slide-active  .text-detail{
+    animation: fadeInRight .5s .7s both;
+}
+.p8.swiper-slide-active  .text-title{
+    animation: fadeInRight .5s .6s both;
+}
+.p8 .logo-ran{
+    width: 1.90rem;
+    height: 1.73rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.other_5adc1e.png);
+    background-position: -3.02rem 0;
+    margin-top: 1.6rem;
+    background-size: 14.56rem 4.64rem;
+}
+.p8 .text-slogon{
+    width: 5.7333rem;
+    height: 1.9733rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.text_2b7b0a.png);
+    background-position: -31.73rem 0;
+    margin-top:5.633rem ;
+    background-size: 51.58rem 2.44rem;
+}
+.p8 .text-detail,.p8 .text-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0.85rem;
+    color: #ffffff;   
+}
+.p8 .text-title{
+    margin-top: 9.38rem;
+    width:auto;
+    height:auto;
+    font-size: 0.45rem;
+    background: none;
+}
+.p8 .text-detail{
+    margin-top: 10.26rem;
+    font-size: 0.266rem;
+    line-height: 1.8;
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translate3d(50%,0,0);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}

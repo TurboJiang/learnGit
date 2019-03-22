@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG  动画</title>
+</head>
+<body>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1024" height="1024">
+        <!-- 圆内写了一个动画，通过坐标的转换实现移动 -->
+        <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
+            <animate attributeName="cx" from="0"to="500" dur="5s" repeateCount="indefinite"/>
+        </circle>
+        <!-- polygon多边形，根据坐标变换来实现图形的变换 -->
+        <polygon points="30 30 70 30 90 70 10 70" fill="#fcc" stroke="black">
+            <!-- fill:freeze变换之后停下来不动 -->
+            <animate attributeName="points" attributeType="XML"to="50 30 70 50 50 90 30 50 "dur="3s"  fill="freeze"></animate>
+        </polygon>
+    </svg>
+</body>
+</html>

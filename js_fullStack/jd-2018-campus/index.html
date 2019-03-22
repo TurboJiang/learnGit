@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./lib/odometer.css">
+    <link rel="shortcut icon"
+  href="//s1.music.126.net/style/favicon.ico">
 </head>
 <body>
+        <audio src="./One Direction - What Makes You Beautiful.mp3" id="bgm"></audio>
+        <div class="music-btn off"></div>
         <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide  p1">
@@ -34,14 +38,50 @@
                              </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        
+                    <div class="swiper-slide p3">
+                        <div class="bg"></div>
+                        <div class="light1"></div>
+                        <div class="dog"></div>
+                        <div class="light2"></div>
+                        <div class="text text-top">
+                          The glory of human race
+                        </div>
+                        <div class="text text-bottom">
+                          快为满足期待，指定专属成长方案，要你不负众望
+                        </div>
+                        <div class="num"></div>
+                    </div>
+                    <div class="swiper-slide p8">
+                      <div class="logo-ran">燃</div>
+                      <div class="text-slogon">
+                        更快到达你想要的未来
+                      </div>
+                      <div class="cube-cnt-2">
+                        <div class="cube-2">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="cube-cnt-3">
+                        <div class="cube-3">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="text-title">
+                        京东2018校园招聘
+                      </div>
+                      <div class="text-detail">
+                        招聘人群：2018  <br/>
+                        本科 硕士 博士
+                      </div>
                     </div>
                 </div>
         </div>
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script> 
-   <script src="./lib/odometer.min.js">
-   </script>
+   <script src="./lib/odometer.min.js"></script>
    <script>   
     // 数字滚动
     const p2Num=document.querySelector('.p2 .num');   
@@ -64,7 +104,41 @@
                   }
               }
             })
-    
+    const p3Num=document.querySelector('.p3 .num');   
+    ad=new Odometer({
+        el:p3Num,
+        value:0.1,
+        format:'(,ddd).ddd',
+        theme:'default'
+    });
+    p3Num.innerHTML=0.1;
+            var mySwiper = new Swiper ('.swiper-container', {
+              direction: 'vertical', // 垂直切换选项  
+                //on监听是否滑到第三屏 
+              on:{
+                  slideChangeTransitionEnd:function(){
+                    if(this.activeIndex===1){
+                        p3Num.innerHTML=10.4;
+                    }
+                  }
+              }
+            })
+
+
+  const musicBtn = document.querySelector('.music-btn');
+  const bgm = document.getElementById('bgm');
+  musicBtn.addEventListener('click', () => {
+    if (bgm.paused) {
+      bgm.play();
+      // musicBtn.classList.remove('off');
+    } else {
+      bgm.pause();
+      // musicBtn.classList.add('off');
+    }
+     // flag=!flag;
+            // 等于去除和添加
+    musicBtn.classList.toggle('off');
+  });
     </script>
 </body>
 </html>
