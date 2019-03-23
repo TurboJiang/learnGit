@@ -7,7 +7,7 @@ html{
     font-size: 37.5px;
 }
 body{
-    ftsize: 0.18rem;
+    font-size: 0.18rem;
 }
 html,body{
     width: 100%;
@@ -222,6 +222,154 @@ html,body{
     margin-top: 1.06667rem;
     color:#fff;
     font-size: 2.66667rem;
+    line-height: 1;
+}
+/* p4 */
+.p4{
+    background-color: #bf7027;
+}
+/* .swiper-slide{
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+} */
+.p4 .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/bg-scene-03_84f0d4.jpg)no-repeat bottom;
+    background-size: 100% auto;
+}
+.p4 .dog,.p4 .light{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.p4 .light{
+    margin-left: -4.06667rem;
+    margin-top: -6.66667rem;
+    width: 8.133333rem;
+    height: 13.36rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/light-scene-03_10d833.png)no-repeat;
+    background-size: 100% auto;
+}
+.p4 .dog{
+    margin-left: -0.8rem;
+    margin-top: -4.53333rem;
+    width: 4.56rem;
+    height: 8.73333rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/dog-scene-03_d49ae4.png)no-repeat;
+    background-size: 100% auto;
+}
+.p4 .text{
+    text-indent: -133.32rem;
+}
+.p4 .text-bottom,.p4 .text-top{
+    position: absolute;
+    background-size: 32.49333rem 2.26667rem;
+}
+.p4 .text-top{
+    top: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-top: 1.6rem;
+    width: 3.33333rem;
+    height: 2.25333rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-position: -9.25333rem 0;
+
+}
+.p4 .text-bottom{
+    bottom: 0;
+    left: 0;
+    margin-left:1.2rem; 
+    margin-bottom: 1.33333rem;
+    width: 1.92rem;
+    height: 0.56rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-position: -7.30667rem 0;
+}
+.p4 .num{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 1.06667rem;
+    margin-bottom: 2rem;
+    color:#fff;
+    font-size: 2.66667rem;
+    line-height: 1;
+}
+/* p5 */
+.p5{
+    background-color: #197fb4;
+}
+.p5 .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/bg-scene-04_9b6216.jpg)no-repeat bottom;
+    background-size: 100% auto;
+}
+.p5 .light{
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin-top: 0.53333rem;
+    margin-left: -5.33333rem;
+    width: 8.24rem;
+    height: 4.8rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/light-scene-04-2_a0155e.png)no-repeat;
+    background-size: 100% auto;
+}
+.p5 .dog{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -8rem;
+    margin-bottom: -2rem;
+    width: 17.14667rem;
+    height: 10.64rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/dog-scene-04_c4a847.png)no-repeat;
+    background-size: 100% auto;
+}
+.p5 .text{
+    text-indent: -133.32rem;
+}
+.p5 .text-top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 1.2rem;
+    margin-top: 1.6rem;
+    width: 4.37333rem;
+    height: 1.82667rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-size: 32.49333rem 2.26667rem;
+}
+.p5 .text-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-bottom: 1.33333rem;
+    width: 1.06667rem;
+    height: 0.56rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    margin-top: 6.66667rem;
+    background-size: 32.49333rem -2.26667rem;
+}
+.p5 .num{
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin-left: 1.06667rem;
+    margin-top: 4rem;
+    color:#fff;
+    font-size:2.6667rem;
     line-height: 1;
 }
 /* p8 */

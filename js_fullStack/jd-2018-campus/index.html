@@ -22,8 +22,7 @@
                             这是一家以速度见长的公司
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide p2">
+                    <div class="swiper-slide swiper-slide-active p2">
                              <div class="bg"></div>
                              <div class="light"></div>
                              <div class="dog"></div>
@@ -36,9 +35,8 @@
                              <div class="num">
 
                              </div>
-                        </div>
                     </div>
-                    <div class="swiper-slide p3">
+                    <div class="swiper-slide swiper-slide-active p3">
                         <div class="bg"></div>
                         <div class="light1"></div>
                         <div class="dog"></div>
@@ -51,7 +49,33 @@
                         </div>
                         <div class="num"></div>
                     </div>
-                    <div class="swiper-slide p8">
+                    <div class="swiper-slide swiper-slide-active p4">
+                      <div class="bg"></div>
+                      <div class="light"></div>
+                      <div class="dog"></div>
+                      <div class="text text-top">
+                        The thrill of diving from the peak
+                      </div>
+                      <div class="text text-bottom">
+                        快为取悦自己，加班调休1:1，越努力越快乐
+                      </div>
+                      <div class="num"></div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active p5">
+                      <div class="bg"></div>
+                      <div class="light"></div>
+                      <div class="dog"></div>               
+                      <div class="text text-top">
+                        The roar of F1 engines
+                      </div>
+                      <div class="text text-bottom">
+                        快以驾驭更强，不谈自理，京东七分熟就启用新人
+                      </div>
+                      <div class="num">
+
+                      </div>
+                    </div>
+                    <div class="swiper-slide  p8">
                       <div class="logo-ran">燃</div>
                       <div class="text-slogon">
                         更快到达你想要的未来
@@ -103,7 +127,8 @@
                     }
                   }
               }
-            })
+            });
+
     const p3Num=document.querySelector('.p3 .num');   
     ad=new Odometer({
         el:p3Num,
@@ -122,8 +147,47 @@
                     }
                   }
               }
-            })
+            });
+    const p4Num=document.querySelector('.p4 .num');   
+    bd=new Odometer({
+        el:p4Num,
+        value:10,
+        format:'(,ddd).ddd',
+        theme:'default'
+    });
+    p4Num.innerHTML=10;
 
+            var mySwiper = new Swiper ('.swiper-container', {
+              direction: 'vertical', // 垂直切换选项  
+                //on监听是否滑到第二屏 
+              on:{
+                  slideChangeTransitionEnd:function(){
+                    if(this.activeIndex===1){
+                        p2Num.innerHTML=57;
+                    }
+                  }
+              }
+            });
+    const p5Num=document.querySelector('.p5 .num');   
+    cd=new Odometer({
+        el:p5Num,
+        value:100,
+        format:'(,ddd).ddd',
+        theme:'default'
+    });
+    p5Num.innerHTML=100;
+
+            var mySwiper = new Swiper ('.swiper-container', {
+              direction: 'vertical', // 垂直切换选项  
+                //on监听是否滑到第二屏 
+              on:{
+                  slideChangeTransitionEnd:function(){
+                    if(this.activeIndex===1){
+                        p5Num.innerHTML=115;
+                    }
+                  }
+              }
+            });
 
   const musicBtn = document.querySelector('.music-btn');
   const bgm = document.getElementById('bgm');
