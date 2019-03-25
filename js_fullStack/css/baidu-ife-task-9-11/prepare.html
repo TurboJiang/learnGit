@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 属性选择器 */
+
+
+    /* 完全匹配 */
+    /* li[class="list-3-item"]{
+        color:aliceblue;
+    } */
+
+
+   /* 部分匹配 以**开始 */
+     /* li[class^="list"]{
+        color：pink;
+    } */
+
+
+    /* 以**结尾 */
+    /* li[class*="-1-item"]{
+        color: antiquewhite;
+    } */
+
+
+    /* li[class$="2-item"] {
+    color: red;
+    } */
+
+    [class*="-3-"] {
+    color: red;
+  }
+    </style>
+</head>
+<body>
+    <li class="list-1-item">1</li>
+    <li class="list-2-item">2</li>
+    <li class="list-3-item">3</li>
+    <li class="list-4-item">4</li>
+</body>
+</html>
