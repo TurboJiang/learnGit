@@ -111,6 +111,8 @@
     // 数字滚动
     const p2Num = document.querySelector('.p2 .num');
     const p3Num = document.querySelector('.p3 .num');
+    const p4Num = document.querySelector('.p4 .num');
+    const p5Num = document.querySelector('.p5 .num');
     od = new Odometer({
       el: p2Num,
       value: 1.618,
@@ -126,6 +128,18 @@
       theme: 'default'
     });
     
+    cd = new Odometer({
+      el: p4Num,
+      value: 10,
+      format: '(,ddd).ddd',
+      theme: 'default'
+    });
+    dd = new Odometer({
+      el: p5Num,
+      value: 100,
+      format: '(,ddd).ddd',
+      theme: 'default'
+    });
     var mySwiper = new Swiper('.swiper-container', {
       direction: 'vertical', // 垂直切换选项  
       //on监听是否滑到第二屏 
@@ -135,71 +149,14 @@
             p2Num.innerHTML = 0.004;
           } else if (this.activeIndex === 2) {
             p3Num.innerHTML = 10.6;
+          }else if(this.activeIndex === 3){
+            p4Num.innerHTML=57;
+          }else if(this.activeIndex===4){
+            p5Num.innerHTML=115;
           }
         }
       }
     });
-
-    // const p3Num = document.querySelector('.p3 .num');
-    // console.log(p3Num)
-    // ad = new Odometer({
-    //   el: p3Num,
-    //   value: 0.1,
-    //   format: '(,ddd).ddd',
-    //   theme: 'default'
-    // });
-    // p3Num.innerHTML = 0.6;
-    // var mySwiper = new Swiper('.swiper-container', {
-    //   direction: 'vertical', // 垂直切换选项  
-    //   //on监听是否滑到第三屏 
-    //   on: {
-    //     slideChangeTransitionEnd: function () {
-    //       if (this.activeIndex === 2) {
-    //         p3Num.innerHTML = 10.4;
-    //       }
-    //     }
-    //   }
-    // });
-    // const p4Num = document.querySelector('.p4 .num');
-    // cd = new Odometer({
-    //   el: p4Num,
-    //   value: 10,
-    //   format: '(,ddd).ddd',
-    //   theme: 'default'
-    // });
-    // p4Num.innerHTML = 10;
-
-    // var mySwiper = new Swiper('.swiper-container', {
-    //   direction: 'vertical', // 垂直切换选项  
-    //   //on监听是否滑到第二屏 
-    //   on: {
-    //     slideChangeTransitionEnd: function () {
-    //       if (this.activeIndex === 1) {
-    //         p2Num.innerHTML = 57;
-    //       }
-    //     }
-    //   }
-    // });
-    // const p5Num = document.querySelector('.p5 .num');
-    // dd = new Odometer({
-    //   el: p5Num,
-    //   value: 100,
-    //   format: '(,ddd).ddd',
-    //   theme: 'default'
-    // });
-    // p5Num.innerHTML = 100;
-
-    // var mySwiper = new Swiper('.swiper-container', {
-    //   direction: 'vertical', // 垂直切换选项  
-    //   //on监听是否滑到第二屏 
-    //   on: {
-    //     slideChangeTransitionEnd: function () {
-    //       if (this.activeIndex === 1) {
-    //         p5Num.innerHTML = 115;
-    //       }
-    //     }
-    //   }
-    // });
 
     const musicBtn = document.querySelector('.music-btn');
     const bgm = document.getElementById('bgm');

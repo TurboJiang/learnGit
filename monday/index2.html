@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bg{
+            background-image: url("./monday/cat/bg.jpg");
+            /* background-size: 100% auto; */
+        }
+    </style>
+    <!--  猫身体需要在屏幕 `水平垂直居中` 的位置；
+- 只需要 `猫爪` 和 `猫尾` 运动即可；
+- 用背景图时，图片容器宽高可以取图片宽高，可用markMan量出；
+- 实现效果和 assert/cat/cat-animation.mp4 `类似` 即可； -->
+</head>
+
+<body>
+    <div class="cat">
+        <div class="bg"></div>
+        <!-- 猫身体 -->
+        <div class="maoshenti">
+            <!-- 猫爪 -->
+            <div class="maozhua"> </div>
+            <div class="eye1">
+                <div class="maoyan"></div>
+            </div>
+            <div class="eye2">
+                <div class="maoyan"></div>
+            </div>
+            <!-- 猫嘴 -->
+            <div class=maozui></div>
+            <!-- 尾巴 -->
+            <div class="maowei"></div>    
+        </div>
+    </div>
+</body>
+
+</html>
