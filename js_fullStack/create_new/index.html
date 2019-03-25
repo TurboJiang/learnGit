@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 指一类人，宅
+
+        // contructor函数
+        function Otaku(name, age) {
+            // this指向实例化后的空对象
+            this.name = name;
+            this.age = age;
+        }
+        // 添加属性
+        Otaku.prototype.strength = 60;
+        Otaku.prototype.sayYourName = function () {
+            console.log('名字是' + this.name);
+        }
+        // 实例化对象
+        var lhr = new Otaku("刘昊然", 21);
+        var jyf = new Otaku("姜野芳", 20);
+        // 手动new,实现和new一样的效果
+        function ObjectFactor(conFn, name, age) {
+            // 1.一定要返回一个新的空对象
+            var obj = new Object();// 给出一个空对象 new Array() new Object()...
+            // 2.加上构造函数里有的属性
+            conFn.call(obj, name, age);
+            // 任何对象的私有属性
+            obj.__proto__=conFn.prototype;
+            // 3.得到原型上的方法和属性
+            return obj;
+        }
+        var wyy = ObjectFactor(Otaku, "吴莹莹", 18);
+        // console.log(wyy);
+    </script>
+</body>
+
+</html>

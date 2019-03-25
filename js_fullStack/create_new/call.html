@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 构造函数为实例化对象提供方便 -->
+    <script>
+        // 构造函数以另外的方式被运行，this指向who？
+        function Otaku(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        var obj=new Object();
+        // 指定对象
+        Otaku.call(obj,"刘昊然", 21);
+        // new Otaku()中发生了什么？
+    </script>
+</body>
+
+</html>
