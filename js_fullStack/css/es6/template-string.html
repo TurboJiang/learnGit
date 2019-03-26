@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tbody id="tbody">
+            <!-- <tr>
+                <td>name</td>
+                <td>age</td>
+                <td>sex</td> 
+            </tr> -->
+        </tbody>
+    </table>
+    <script>
+        const tbody = document.getElementById('tbody');
+        const person = {
+            name: '韩梅梅',
+            age: 18,
+            sex: 'male',
+            keywords: ['sing', 'play game']
+        }
+        const people = [
+            { name: '李雷', age: 18 },
+            { name: '韩梅梅', age: 19 }
+        ]
+        const combileHtml=people.map(person=>{
+            return `<tr>
+                    <td>${[person.name]}</td>
+                    <td>${[person.age]}</td>
+                </tr>`
+        })
+        const htmlcontent=combileHtml.join('');
+        tbody.innerHTML=htmlcontent;
+        // console.log(combileHtml) 
+
+        // function renderKeywords(arr) {
+        //     return arr.map(keywords => {
+        //         return `<li>${keywords}</li>`
+        //     }).join(' ');
+            // join返回的字符串默认用逗号隔开，传入空格
+        // }
+        // es5
+        // tbody.innerHTML='<tr><td>'+person.name+'<td><td>'+person.age+'<td><tr>';
+
+        // es6使用反引号``
+        // ${}代表变量，{}中可以放任意的js表达式
+        // let str = `<tr>
+        //         <td>${person.name}</td>
+        //         <td>${person.age}</td>
+        //         <td>${person.sex == 'female' ? '女' : '男'}</td>
+        //         <td>${renderKeywords(person.keywords)}</td>
+        //         <td>${100 + 100}</td>
+        //         <td>${'学习' + 2 + '睡觉' + 1}</td>
+        //     </tr>`
+        // tbody.innerHTML = str;
+
+    </script>
+</body>
+
+</html>
