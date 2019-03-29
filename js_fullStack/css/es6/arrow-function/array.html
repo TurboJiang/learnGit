@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const ages = [
+            { name: '李雷1', age: 18 },
+            { name: '李雷2', age: 30 },
+            { name: '李雷3', age: 20 },
+            { name: '李雷4', age: 10 },
+        ]
+
+        const age1_index = ages.findIndex((person) => {
+            return person.age === 30;
+        })
+        const age2 = ages.find((person) => {
+                return person.age > 15;
+        })
+        console.log(age1_index,age2);
+        // const ages = [18, 20, 30, 40, 10];
+        // 1.返回数组某个元素，找不到返回undifined
+        // const this_age=ages.find((age)=>{
+        //     return age===0;
+        // })
+        // 2.返回数组某个元素的下标值，找不到返回-1
+        // const this_age_index = ages.findIndex((age) => {
+        //     return age === 0;
+        // })
+        // console.log(this_age, this_age_index);
+    </script>
+</body>
+
+</html>

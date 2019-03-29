@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>类</title>
+</head>
+
+<body>
+    <!-- ul#lists>li*4 -->
+    <ul id="lists">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        // 类数组
+        const lis = document.querySelectorAll('#lists li');
+        console.log(lis);
+        const lis_array = Array.from(lis);
+        const lisHTMLContent = lis_array.map(liNode => liNode.innerHTML);
+        // .map((liNode)=>{
+        //     return liNode.innerHTML;
+        // })
+        console.log(lisHTMLContent);
+
+        // 真数组
+        const arr = [1, 2, 3]
+
+        function foo() {
+            console.log(arguments);
+            const arguments_arr = Array.from(arguments);
+            // 返回扩大两倍的数组
+            // const map_arr=arguments_arr.map(arg =>arg * 2);
+            // Array.from
+            // map
+
+            // 大于等于10的数组元素乘以3 小于10的不变
+            const map_arr1=arguments_arr.map((arr1)=>{
+                if(arr1>=10){
+                    return arr1*3;
+                    }else{return arr1;}
+            })
+            return map_arr1;
+            // return map_arr;
+        }
+        // 输入
+        const bar=foo(1,8,10,11);
+        console.log(bar);
+        // 输出
+        // [1,8,30,33]
+        // foo(1, 2, 3, 4, 5);
+    </script>
+</body>
+
+</html>
