@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>扩展运算符</title>
+</head>
+<body>
+    <script>
+        // 扩展运算符 好比是刚才rest参数的逆运算
+        // 将一个数组打散
+        const arr=[6,8,9];
+        console.log(...arr);
+        // 重组
+        console.log([...arr]);
+
+
+
+        const arr1=[0,1,2];
+        const arr2=[3,4,5];
+
+        const newArr=arr1.concat(arr2).concat(arr);
+        console.log(newArr);
+
+        const newArr_spread=[...arr1,...arr2,...arr];
+        console.log(newArr_spread);
+
+
+        // push()
+        // arr1.push(3,4,5);
+        arr1.push(...arr2,...arr);
+        console.log(arr1);
+
+
+        const min_arr=[100,1000,378,90,3];
+        console.log(Math.min(min_arr));//NaN
+        console.log(Math.min(...min_arr));//3
+        console.log(Math.min(90,99,78,100,67));
+
+        // 可打散可不打散
+        function sum(...args){
+            let total=0;
+            // args为数组 
+            for(let i=0;i<args.length;i++){
+                total=total+args[i];
+            }
+            return total;
+            // 求和
+            // return sum;
+        };
+        const m_arr=[90,99,3,100];//——>90,99,3,100
+        const sum_arr=sum(...m_arr);
+    </script>
+</body>
+</html>

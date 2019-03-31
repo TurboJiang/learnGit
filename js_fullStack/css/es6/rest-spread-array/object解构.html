@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- 对象解构花括号 -->
+
+<body>
+    <script>
+        const obj = {
+            name: '李雷',
+            age: 32,
+            foo: { bar: 'marvel' },
+            bars: ['HELLO', { msg: 'WORLD' }]
+        }
+
+        // es5
+        // var name=obj.name,age=obj.age;
+
+
+        // es6顺序无所谓 赋值
+        // const{age,name,foo}=obj;
+        
+        // :后面的内容替代：前的内容,内容被替代之后就没用了  不存在的值被解构返回undifined
+        // const{age:this_age,name:this_name,foo:{bar},bars}=obj;
+
+        var hello='123';//hello=HELLO，值不会被覆盖
+        var { age: this_age, name: this_name, foo: { bar }, bars: [hello, { msg: world }] } = obj;
+    </script>
+</body>
+
+</html>

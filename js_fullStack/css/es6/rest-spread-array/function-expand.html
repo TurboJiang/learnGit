@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Person(nickName){
+        // es5
+        //     if(!nickName){
+        //         nickName='未知昵称'
+        //     }
+        //     this.nickName=nickName;
+        // }
+        
+        // es6对函数的拓展
+        function Person(nickName = '未知昵称') {
+            this.nickName = nickName;
+        }
+
+        const p1 = new Person('LIUHAORAN');
+        // Person {nickName: "LIUHAORAN"}
+        const p2 = new Person();
+        // Person {nickName: undefined}
+
+        const p3 = new Person();
+        // if——>Person {nickName: "未知昵称"}
+
+
+        // rest 参数 形式(...变量名)——>获取多余的数组（a...args:a以后的均为多余的） ，变量名为数组，将多余的变量放入数组中
+
+        // ...+变量名——>将传进去的参数转为数组
+        function sum(a,z,...args){//报错：(a,...args,z) Rest parameter must be last formal parameter
+            // Array.form()将所有的参数转为数组
+            // console.log(arguments);
+            console.log(args);
+        }
+        sum(2,4,6,8);
+    </script>
+</body>
+
+</html>

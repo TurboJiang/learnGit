@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array</title>
+</head>
+<!-- 数组解构中括号 -->
+<body>
+    <script>
+       const lists=[
+           {name:'李雷'},
+           {age:20},
+           [{school:'ECUT'}]
+       ];
+        // 效果：我是李雷，我今年20岁
+
+        // es5
+        // var nameObj=lists[0];
+        // var ageObj=lists[1];
+
+
+        // es6
+        // a,b自动一一对应数组
+        const [a,b]=lists;
+        // 只解析最后一个，解构不存在的值返回undifined
+        const [,,c]=lists;
+        // f===一个只有一个元素的数组
+        const [,,f]=lists;
+        // e===数组内容
+        const [,,[e]]=lists;
+    </script>
+</body>
+</html>
